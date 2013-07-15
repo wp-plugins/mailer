@@ -9,7 +9,7 @@ class MailerControls {
     function is_action($action) {
         if (empty($_REQUEST['act'])) return false;
         if ($_REQUEST['act'] != $action) return false;
-        if (check_admin_referer()) return true;
+        if (check_admin_referer('save')) return true;
         die('Invalid call');
     }
 
@@ -50,7 +50,8 @@ class MailerControls {
     }
 
     function init() {
+      
         echo '<input name="act" type="hidden" value=""/>';
-        wp_nonce_field();
+        wp_nonce_field('save');
     }
 }

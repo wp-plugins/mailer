@@ -1,11 +1,11 @@
 === Mailer ===
-Tags: mail, email, throttling, hostgator, dreamhost, godaddy, mass email, smtp, sendgrid
+Tags: mail, email, throttling, hostgator, dreamhost, godaddy, mass email, smtp, sendgrid, queue
 Requires at least: 3.0.0
-Tested up to: 3.4.2
+Tested up to: 3.5.2
 Stable tag: trunk
 Donate link: http://www.satollo.net/donations
 
-Mailer throttles emails from WordPress to keep the email flow within provider limits. SMTP ready.
+Mailer queues and throttles emails from WordPress to keep the email flow within provider limits. SMTP ready.
 
 == Description ==
 
@@ -41,6 +41,33 @@ None.
 
 == Changelog ==
 
+= 1.4.0 =
+
+* Ported all the pro features
+
+= 1.3.3 =
+
+* new admin panel
+
+= 1.3.2 =
+
+* a little fix to avoid double email when the blog is called from synchronized crons
+* new mailer_set and mailer_reset functions to drive the Mailer behavior
+
+= 1.3.1 =
+
+* removed unused code
+
+= 1.3.0 =
+
+* unserializable exception managed
+* new php mailer exceptions (php 5) controlled
+
+= 1.2.0 =
+
+* made compatible with new phpmailer library which is mo more compatible with its older version...
+* removed the experimental bounce checking, it was not realiable
+
 = 1.1.0 =
 
 * now free!
@@ -60,8 +87,3 @@ None.
 = 1.0.1 =
 
 * Email extraction: removed the greater than and lower than characters
-
-= 1.0.0 =
-
-* First release
-
