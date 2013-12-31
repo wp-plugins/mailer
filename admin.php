@@ -30,7 +30,6 @@ class MailerAdmin {
     function hook_admin_head() {
         if (isset($_GET['page']) && strpos($_GET['page'], 'mailer/') === 0) {
             echo '<link type="text/css" rel="stylesheet" href="' . MAILER_URL . '/admin.css?' . MAILER_VERSION . '"/>';
-            echo '<script src="' . MAILER_URL . '/admin.js?' . MAILER_VERSION . '"></script>';
         }
     }
 

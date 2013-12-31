@@ -77,7 +77,32 @@ $mailer->options = $options;
 
 $controls->options = $plugin->get_options();
 ?>
+<script>
+var tabs;
+jQuery(document).ready(function(){
+  jQuery(function() {
+    tabs = jQuery("#tabs").tabs();
+  });    
+});
+</script>
 <div class="wrap">
+    
+<div id="satollo-header">
+        <a href="http://www.satollo.net/plugins/mailer" target="_blank">Get Help</a>
+        <a href="http://www.satollo.net/forums" target="_blank">Forum</a>
+
+        <form style="display: inline; margin: 0;" action="http://www.satollo.net/wp-content/plugins/newsletter/do/subscribe.php" method="post" target="_blank">
+            Subscribe to satollo.net <input type="email" name="ne" required placeholder="Your email">
+            <input type="hidden" name="nr" value="include-it">
+            <input type="submit" value="Go">
+        </form>
+        <!--
+        <a href="https://www.facebook.com/satollo.net" target="_blank"><img style="vertical-align: bottom" src="http://www.satollo.net/images/facebook.png"></a>
+        -->
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5PHGDGNHAYLJ8" target="_blank"><img style="vertical-align: bottom" src="http://www.satollo.net/images/donate.png"></a>
+        <a href="http://www.satollo.net/donations" target="_blank">Even <b>2$</b> helps: read more</a>
+    </div>
+    
   <h2>Mailer</h2>
 
       <?php if ($action == 'bounce_test') { ?>
