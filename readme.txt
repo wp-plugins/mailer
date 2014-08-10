@@ -1,7 +1,7 @@
 === Mailer ===
 Tags: mail, email, throttling, hostgator, dreamhost, godaddy, mass email, smtp, sendgrid, queue
 Requires at least: 3.0.0
-Tested up to: 3.8
+Tested up to: 3.9.2
 Stable tag: trunk
 Donate link: http://www.satollo.net/donations
 
@@ -40,6 +40,10 @@ See [Mailer official page](http://www.satollo.net/plugins/mailer).
 None.
 
 == Changelog ==
+
+= 1.4.2 =
+
+* Fixed few notices
 
 = 1.4.1 =
 
