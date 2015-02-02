@@ -4,7 +4,7 @@
   Plugin Name: Mailer
   Plugin URI: http://www.satollo.net/plugins/mailer
   Description: Mailer throttles emails sent by WordPress and its plugins to bypass provider's mails per hours limit.
-  Version: 1.4.2
+  Version: 1.4.3
   Author: Stefano Lissa
   Author URI: http://www.satollo.net
   Disclaimer: Use at your own risk. No warranty expressed or implied is provided.
@@ -14,7 +14,7 @@
   Copyright 2014 Stefano Lissa  (email : satollo@gmail.com)
  */
 
-define('MAILER_VERSION', '1.4.2');
+define('MAILER_VERSION', '1.4.3');
 
 define('MAILER_DIR', WP_CONTENT_DIR . '/mailer');
 define('MAILER_OUT_DIR', MAILER_DIR . '/out');

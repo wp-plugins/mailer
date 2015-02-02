@@ -82,11 +82,11 @@ var tabs;
 jQuery(document).ready(function(){
   jQuery(function() {
     tabs = jQuery("#tabs").tabs();
-  });    
+  });
 });
 </script>
 <div class="wrap">
-    
+
 <div id="satollo-header">
         <a href="http://www.satollo.net/plugins/mailer" target="_blank">Get Help</a>
         <a href="http://www.satollo.net/forums" target="_blank">Forum</a>
@@ -102,32 +102,8 @@ jQuery(document).ready(function(){
         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5PHGDGNHAYLJ8" target="_blank"><img style="vertical-align: bottom" src="http://www.satollo.net/images/donate.png"></a>
         <a href="http://www.satollo.net/donations" target="_blank">Even <b>2$</b> helps: read more</a>
     </div>
-    
+
   <h2>Mailer</h2>
-
-      <?php if ($action == 'bounce_test') { ?>
-    <div class="updated"><p>
-        <strong>POP3 test connection report:</strong>
-        <?php
-        @require_once ABSPATH . WPINC . '/class-pop3.php';
-
-        $pop3 = new POP3();
-        if (!$pop3->connect($plugin->get_option('bounce_host'), $plugin->get_option('bounce_port')) ||
-                !$pop3->user($plugin->get_option('bounce_user'))) {
-          echo esc_html($pop3->ERROR);
-        } else {
-          $count = $pop3->pass($plugin->get_option('bounce_pass'));
-
-          if (false === $count) {
-            echo esc_html($pop3->ERROR);
-          } else {
-            echo "Connection ok, found " . $count . " messages.";
-            $pop3->quit();
-          }
-        }
-        ?>
-      </p></div>
-  <?php } ?>
 
 
       <?php if ($action == 'smtp_test') { ?>
@@ -182,6 +158,16 @@ jQuery(document).ready(function(){
       </pre>
     </div>
   <?php } ?>
+
+      <p>
+        Check out my other useful plugins:<br>
+        <a href="http://www.satollo.net/plugins/comment-plus?utm_source=hyper-cache&utm_medium=banner&utm_campaign=comment-plus" target="_blank"><img src="http://www.satollo.net/images/plugins/comment-plus-icon.png"></a>
+        <a href="http://www.satollo.net/plugins/header-footer?utm_source=hyper-cache&utm_medium=banner&utm_campaign=header-footer" target="_blank"><img src="http://www.satollo.net/images/plugins/header-footer-icon.png"></a>
+        <a href="http://www.satollo.net/plugins/include-me?utm_source=hyper-cache&utm_medium=banner&utm_campaign=include-me" target="_blank"><img src="http://www.satollo.net/images/plugins/include-me-icon.png"></a>
+        <a href="http://www.thenewsletterplugin.com/?utm_source=hyper-cache&utm_medium=banner&utm_campaign=newsletter" target="_blank"><img src="http://www.satollo.net/images/plugins/newsletter-icon.png"></a>
+        <a href="http://www.satollo.net/plugins/php-text-widget?utm_source=hyper-cache&utm_medium=banner&utm_campaign=php-text-widget" target="_blank"><img src="http://www.satollo.net/images/plugins/php-text-widget-icon.png"></a>
+        <a href="http://www.satollo.net/plugins/hyper-cache?utm_source=hyper-cache&utm_medium=banner&utm_campaign=hyper-cache" target="_blank"><img src="http://www.satollo.net/images/plugins/hyper-cache-icon.png"></a>
+    </p>
 
   <h3>Documentation</h3>
   <p>

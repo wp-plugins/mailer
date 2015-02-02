@@ -9,8 +9,9 @@ class MailerCron {
         self::$instance = $this;
 
         $max_time = (int) (ini_get('max_execution_time') * 0.9);
-        if ($max_time == 0)
+        if ($max_time == 0) {
             $max_time = 180;
+        }
         $this->time_limit = time() + $max_time;
 
         add_filter('cron_schedules', array($this, 'wp_cron_schedules'));

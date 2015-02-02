@@ -1,9 +1,10 @@
 === Mailer ===
-Tags: mail, email, throttling, hostgator, dreamhost, godaddy, mass email, smtp, sendgrid, queue
+Tags: mail, email, throttling, mass email, smtp, queue
 Requires at least: 3.0.0
-Tested up to: 3.9.2
+Tested up to: 4.1
 Stable tag: trunk
 Donate link: http://www.satollo.net/donations
+Contributors: satollo
 
 Mailer queues and throttles emails from WordPress to keep the email flow within provider limits. SMTP ready.
 
@@ -40,6 +41,10 @@ See [Mailer official page](http://www.satollo.net/plugins/mailer).
 None.
 
 == Changelog ==
+
+= 1.4.3 =
+
+* Fixes
 
 = 1.4.2 =
 
