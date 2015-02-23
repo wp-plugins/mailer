@@ -42,6 +42,10 @@ None.
 
 == Changelog ==
 
+= 1.4.4 =
+
+* Fix for PHP 5.4+
+
 = 1.4.3 =
 
 * Fixes
